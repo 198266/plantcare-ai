@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import '../scanner/scanner_screen.dart';import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -19,9 +19,16 @@ class HomeScreen extends StatelessWidget {
             ),
             const SizedBox(height: 20),
             ElevatedButton(
-              onPressed: () {},
-              child: const Text("📷 Scanner une plante"),
-            ),
+  onPressed: () {
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (context) => const ScannerScreen(),
+      ),
+    );
+  },
+  child: const Text("📷 Scanner une plante"),
+),
           ],
         ),
       ),
