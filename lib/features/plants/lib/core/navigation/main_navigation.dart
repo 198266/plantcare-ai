@@ -1,3 +1,4 @@
+import '../../features/explore/explore_screen.dart';
 import 'package:flutter/material.dart';
 
 import '../../features/home/home_screen.dart';
@@ -15,10 +16,11 @@ class _MainNavigationState extends State<MainNavigation> {
   int currentIndex = 0;
 
   final pages = const [
-    HomeScreen(),
-    ScannerScreen(),
-    PlantsScreen(),
-  ];
+  HomeScreen(),
+  ScannerScreen(),
+  PlantsScreen(),
+  ExploreScreen(),
+];
 
   @override
   Widget build(BuildContext context) {
@@ -31,7 +33,10 @@ class _MainNavigationState extends State<MainNavigation> {
             currentIndex = index;
           });
         },
-        items: const [
+        BottomNavigationBarItem(
+  icon: Icon(Icons.menu_book),
+  label: "Explorer",
+),
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
             label: "Accueil",
