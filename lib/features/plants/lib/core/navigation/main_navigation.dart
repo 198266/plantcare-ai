@@ -1,3 +1,4 @@
+import '../../features/profile/profile_screen.dart';
 import '../../features/explore/explore_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -20,6 +21,7 @@ class _MainNavigationState extends State<MainNavigation> {
   ScannerScreen(),
   PlantsScreen(),
   ExploreScreen(),
+  ProfileScreen(),
 ];
 
   @override
@@ -49,7 +51,10 @@ class _MainNavigationState extends State<MainNavigation> {
             icon: Icon(Icons.local_florist),
             label: "Plantes",
           ),
-        ],
+          BottomNavigationBarItem(
+            icon: Icon(Icons.person),
+            label: "Profil",
+),
       ),
     );
   }
