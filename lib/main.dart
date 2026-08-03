@@ -1,5 +1,6 @@
+
 import 'package:flutter/material.dart';
-import 'features/home/home_screen.dart';
+import 'core/navigation/main_navigation.dart';
 
 void main() {
   runApp(const PhytoSenseApp());
@@ -16,7 +17,7 @@ class PhytoSenseApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.green,
       ),
-      home: const HomeScreen(),
+      home: const MainNavigation(),
     );
   }
 }
